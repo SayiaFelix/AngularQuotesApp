@@ -2,13 +2,13 @@ export class Quotes {
     upVote:number | undefined;
     downVote:number | undefined
     name:string| undefined
-    description:string
+    detail:string | undefined
 
-    constructor( upVote: number,downVote: number,name: string,description:string){
+    constructor( upVote: number,downVote: number,name: string,detail:string){
       this.upVote=upVote
       this.downVote=downVote
       this.name=name
-      this.description=description
+      this.detail=detail
     }
 
 }

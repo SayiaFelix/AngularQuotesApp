@@ -4,20 +4,23 @@
     <div class="row mt-3">
 
         <div class="col-6">
+            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+        </div>
+
+        <div class=" col-6">
+            <h2 class="text-center">Quotes List</h2>
+            <hr>
             <ul>
                 <li *ngFor='let quote of quotes let i=index'>
                     {{quote.upVote}} {{quote.downVote}}-{{quote.name}}
-                    <br> {{quote.description}}
+                    <br> {{quote.detail}}
                 </li>
             </ul>
-            <div class="">
-                <app-quote-details [quote]="quote" (isComplete)='completeQuote($event,0)'></app-quote-details>
+            <div class=" ">
+                <app-quote-details [quote]="quote" (isComplete)='deleteQuote($event,0)'></app-quote-details>
             </div>
         </div>
 
-        <div class="col-6">
 
-
-        </div>
     </div>
 </div>
