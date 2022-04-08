@@ -5,13 +5,13 @@
 
         <div class="col-6">
             <ul>
-                <li *ngFor='let quote of quotes'>
+                <li *ngFor='let quote of quotes let i=index'>
                     {{quote.upVote}} {{quote.downVote}}-{{quote.name}}
-                    <!-- <br> {{quote.description}} -->
+                    <br> {{quote.description}}
                 </li>
             </ul>
             <div class="">
-                <app-quote-details [quote]="quote"></app-quote-details>
+                <app-quote-details [quote]="quote" (isComplete)='completeQuote($event,0)'></app-quote-details>
             </div>
         </div>
 
