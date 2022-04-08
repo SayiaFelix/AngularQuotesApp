@@ -7,10 +7,11 @@
             <ul>
                 <li *ngFor='let quote of quotes'>
                     {{quote.upVote}} {{quote.downVote}}-{{quote.name}}
+                    <!-- <br> {{quote.description}} -->
                 </li>
             </ul>
             <div class="">
-                <app-quote-details></app-quote-details>
+                <app-quote-details [quote]="quote"></app-quote-details>
             </div>
         </div>
 

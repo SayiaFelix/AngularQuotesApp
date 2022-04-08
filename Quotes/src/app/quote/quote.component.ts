@@ -13,13 +13,13 @@ export class QuoteComponent implements OnInit {
 
 
  quotes: Quotes[] = [
-    new Quotes(1,0,'No man is an Island' ),
-    new Quotes(2,0,'Enjoy life when you still young'),
-    new Quotes(3,0,'Learn untill you earn'),
+    new Quotes(0,0,'No man is an Island','Find an online version and watch merlin find his son' ),
+    new Quotes(0,0,'Enjoy life when you still young','Find an online version and watch merlin find his son'),
+    new Quotes(0,0,'Learn untill you earn','Find an online version and watch merlin find his son'),
    
   ];
 
-  
+  quote:Quotes | undefined
 
   constructor() { }
 
