@@ -26,8 +26,7 @@ export class QuoteComponent implements OnInit {
          this.quotes.splice(index,1);
        }
   }   
-  addNewQuote(quote: any){
-
+  addNewQuotes(quote: any){
       quote.date = new Date(quote.date)
       this.quotes.push(quote)
   }
@@ -36,7 +35,6 @@ export class QuoteComponent implements OnInit {
   highest=Math.max(...this.array)
 
   constructor() { }
-
   ngOnInit(): void {
   }
 
