@@ -1,21 +1,29 @@
 <div class="container">
-    <h1 class="text-center mt-3" id="HOME">Sir Felix Quotes Hub</h1>
+    <h1 class="text-center mt-3" id="HOME">Sir Felix Quote Hub</h1>
     <hr>
     <div class="row mt-3">
-        <div class="col-6">
+        <div class="col-5">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
 
-        <div class=" col-6">
+        <div class="col-7">
             <h2 class="text-center">Quotes List</h2>
             <hr>
             <ul>
                 <li *ngFor='let quote of quotes let i=index'>
-                    <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> <br> Quote; <strong id="name">{{quote.name}}</strong>
-                    <br> <span id="detail">{{quote.detail}}</span>
+                    <div *ngIf="quote.upVote == highest && quote.upVote > 0; then highlight else unhighlight">
+                    </div>
+                    <ng-template #highlight>
+                        <p appHighlight> <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> Quote; <strong id="name">{{quote.name}}</strong></p>
+                    </ng-template>
+
+                    <ng-template #unhighlight>
+                        <p> <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> Quote; <strong id="name">{{quote.name}}</strong></p>
+                    </ng-template>
+                    <span id="detail">{{quote.detail}}</span>
                 </li>
             </ul>
-            <div class=" ">
+            <div class="">
                 <app-quote-details [quote]="quote" (isComplete)='deleteQuote($event,0)'></app-quote-details>
             </div>
         </div>

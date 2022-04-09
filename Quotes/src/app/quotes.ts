@@ -1,8 +1,8 @@
 export class Quotes {
-    upVote:number | undefined;
-    downVote:number | undefined
-    name:string| undefined
-    detail:string | undefined
+    upVote:number
+    downVote:number
+    name:string
+    detail:string
 
     constructor( upVote: number,downVote: number,name: string,detail:string){
       this.upVote=upVote
