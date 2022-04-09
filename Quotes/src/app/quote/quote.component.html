@@ -20,11 +20,11 @@
                     <ng-template #unhighlight>
                         <p> <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> Quote; <strong id="name">{{quote.name}}</strong></p>
                     </ng-template>
-                    <span id="detail">{{quote.detail}}</span>
+                    <span id="detail"> Written by; <strong>{{quote.author}}</strong>,submitted by; {{quote.detail}}</span> on {{quote.date|date}}
                 </li>
             </ul>
             <div class="">
-                <app-quote-details [quote]="quote" (isComplete)='deleteQuote($event,0)'></app-quote-details>
+                <app-quote-details [quote]="quote" (isComplete)='deleteQuote($event,3)'></app-quote-details>
             </div>
         </div>
 

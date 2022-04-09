@@ -6,19 +6,40 @@
             <label for="name" class="fs-4 fw-bolder">Quote;</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name" #quote='ngModel' required>
             <div class="alert alert-danger" [hidden]="quote.valid || quote.pristine">
-                Quote is required
+                <!-- <div *ngIf=>
+
+                </div> -->
+                Add Quote!!!
             </div>
-            <br> <strong>Display;<br> {{newQuotes.name}}</strong>
         </div>
         <br>
         <div class="form-group">
-            <label for="detail" class="fs-4 fw-bolder">Quote Details;</label>
-            <input type="text" class="form-control" id="detail" [(ngModel)]="newQuotes.detail" detail="detail" #detail='ngModel' required>
-            <div class="alert alert-danger" [hidden]="detail.valid || detail.pristine">
-                Add More Detail
+            <label for="author" class="fs-4 fw-bolder">Author;</label>
+            <input type="text" class="form-control" required id="author" [(ngModel)]="newQuotes.author" author="author" #author='ngModel'>
+            <div class="alert alert-danger" [hidden]="author.valid || author.pristine">
+
+                Add Author!!!
             </div>
+            <!-- Display;<br>Quote; {{newQuotes.name}}<strong> Author;{{newQuotes.author}}</strong> -->
         </div>
-        <br> <br>
+        <br>
+        <div class="form-group">
+            <label for="detail" class="fs-4 fw-bolder">Name;</label>
+            <input type="text" class="form-control" id="detail" [(ngModel)]="newQuotes.detail" detail="detail" #detail='ngModel' required>
+            <!-- <div class="alert alert-danger " [hidden]="detail.touched && detail.valid || detail.pristine ">
+                Add Your Name!!!
+            </div> -->
+        </div>
+        <br>
+        <div class="form-group pb-6 ">
+            <label for="date" class="fs-6 fw-bolder">Current Date</label>
+            <br>
+            <input type='date' id="date " [(ngModel)]="newQuotes.date" name="completeDate" #date="ngModel" required>
+            <!-- <div [hidden]="date.valid || date.pristine " class="alert alert-danger">
+                <p>Date is required</p>
+            </div> -->
+        </div>
+        <br>
         <button type="submit" class="btn btn-secondary btn-lg">Add Quotes</button>
     </form>
 </div>

@@ -13,10 +13,9 @@ export class QuoteComponent implements OnInit {
 
 
  quotes: Quotes[] = [
-    new Quotes(5,0,'No man is an Island','Find an online version and watch merlin find his son' ),
-    new Quotes(1,0,'Enjoy life when you still young','Find an online version and watch merlin find his son'),
-    new Quotes(0,0,'Learn untill you earn','Find an online version and watch merlin find his son'),
-   
+    new Quotes(5,0,'No man is an Island','S.F Lucas','Ann Awsome',new Date(2020,1,14)),
+    new Quotes(1,0,'Enjoy life when you still young','E. Rensia','Sayia Lucas',new Date(2020,2,14)),
+    new Quotes(0,0,'Learn untill you earn','O.L Collins','Emmarensia Owino',new Date(2020,3,14)),
   ];
 
   quote:Quotes | undefined 
@@ -28,7 +27,9 @@ export class QuoteComponent implements OnInit {
        }
   }   
   addNewQuote(quote: any){
-    this.quotes.push(quote)
+
+      quote.date = new Date(quote.date)
+      this.quotes.push(quote)
   }
 
   array: number[]=this.quotes.map(quote=> quote.upVote)

@@ -4,11 +4,11 @@
 
 li {
     list-style: circle;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 
 .container {
-    /* height: 85vh; */
+    height: 90vh;
     margin-top: 2px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
