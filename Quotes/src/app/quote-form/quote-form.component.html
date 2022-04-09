@@ -3,22 +3,22 @@
     <hr>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
         <div class="form-group">
-            <label for="name">Quote</label>
+            <label for="name" class="fs-4 fw-bolder">Quote;</label>
             <input type="text" class="form-control" id="name" [(ngModel)]="newQuotes.name" name="name" #quote='ngModel' required>
             <div class="alert alert-danger" [hidden]="quote.valid || quote.pristine">
                 Quote is required
             </div>
-            <br> Display {{newQuotes.name}}
+            <br> <strong>Display;<br> {{newQuotes.name}}</strong>
         </div>
-
+        <br>
         <div class="form-group">
-            <label for="detail">Quote Details</label>
+            <label for="detail" class="fs-4 fw-bolder">Quote Details;</label>
             <input type="text" class="form-control" id="detail" [(ngModel)]="newQuotes.detail" detail="detail" #detail='ngModel' required>
             <div class="alert alert-danger" [hidden]="detail.valid || detail.pristine">
                 Add More Detail
             </div>
         </div>
-        <br>
+        <br> <br>
         <button type="submit" class="btn btn-secondary btn-lg">Add Quotes</button>
     </form>
 </div>

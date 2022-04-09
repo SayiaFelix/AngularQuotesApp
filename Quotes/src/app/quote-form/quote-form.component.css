@@ -1,0 +1,6 @@
+.container-fluid {
+    height: 70vh;
+    border-left: 2px solid black;
+    border-right: 1px solid black;
+    border-radius: 5px;
+}

@@ -1,8 +1,7 @@
 <div class="container">
-    <h1 class="text-center mt-4" id="HOME">Sir Felix Quotes Hub</h1>
+    <h1 class="text-center mt-3" id="HOME">Sir Felix Quotes Hub</h1>
     <hr>
     <div class="row mt-3">
-
         <div class="col-6">
             <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
         </div>
@@ -12,8 +11,8 @@
             <hr>
             <ul>
                 <li *ngFor='let quote of quotes let i=index'>
-                    {{quote.upVote}} {{quote.downVote}}-{{quote.name}}
-                    <br> {{quote.detail}}
+                    <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> <br> Quote; <strong id="name">{{quote.name}}</strong>
+                    <br> <span id="detail">{{quote.detail}}</span>
                 </li>
             </ul>
             <div class=" ">
