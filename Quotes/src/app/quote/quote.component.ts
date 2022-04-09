@@ -28,7 +28,7 @@ export class QuoteComponent implements OnInit {
   }   
   addNewQuotes(quote: any){
       quote.date = new Date(quote.date)
-      this.quotes.push(quote)
+      this.quotes.push(quote)   
   }
 
   array: number[]=this.quotes.map(quote=> quote.upVote)
