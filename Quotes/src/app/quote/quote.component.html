@@ -12,7 +12,6 @@
             <ul>
                 <li *ngFor='let quote of quotes let i=index'>
                     {{quote.id}}.)
-
                     <div *ngIf="quote.upVote == highest && quote.upVote > 0; then highlight else unhighlight">
                     </div>
                     <ng-template #highlight>
@@ -24,19 +23,15 @@
                     </ng-template>
 
                     <!-- <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> -->
-
-
                     <p id="description"> <br> Author; <span id="detail">{{quote.author}} </span>and submitted by; <span id="detail">{{quote.detail}}</span> <br> Posted; <span id="date">{{quote.date|dateCount}}</span></p>
 
-                    <app-up-vote-down-vote>
-
-                    </app-up-vote-down-vote>
+                    <app-up-vote-down-vote> </app-up-vote-down-vote>
                 </li>
 
             </ul>
 
             <div class="">
-                <app-quote-details [quote]="quote" (isComplete)='deleteQuote($event,3)'></app-quote-details>
+                <app-quote-details [quote]="quote" (isComplete)='deleteQuote($event,2)'></app-quote-details>
             </div>
 
         </div>

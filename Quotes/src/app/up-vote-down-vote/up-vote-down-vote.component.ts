@@ -12,10 +12,10 @@ export class UpVoteDownVoteComponent implements OnInit {
 
   upVoteButtonClick() {
     this.numberOfUpvotesAndDownVotes++;
-    if(Quotes.upVote>0){
+    // if(Quotes.upVote>0){
 
 
-    }
+    // }
   }
   downVoteButtonClick(){
     this.numberOfUpvotesAndDownVotes--;

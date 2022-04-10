@@ -73,14 +73,14 @@ Add Quote!!!
                 </div>
             </div>
             <br>
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="date" class="fs-6 fw-bolder">Current Date;</label>
                 <br>
                 <input type='date' id="date " [(ngModel)]="newQuotes.date" name="completeDate" #date="ngModel" required>
                 <div [hidden]="date.valid || date.pristine " class="alert alert-danger">
                     <p>Add Date!!!!</p>
                 </div>
-            </div>
+            </div> -->
             <br>
             <button type="submit" class="btn btn-success btn-lg" [disabled]="!quoteForm.valid">Add Quote</button>
         </div>
