@@ -1,3 +1,5 @@
+# Quotes
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 #### {9th April 2022}
 #### By **{Sayia Felix Lucas}**
@@ -33,10 +35,6 @@ https://github.com/SayiaFelix/AngularQuotesApp.git
 
 ### Live site
 Available Here;
-
-# Quotes
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
 
