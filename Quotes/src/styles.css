@@ -1,4 +1,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 body {
-    background-color: rgb(186, 186, 209);
+    /* background-color: rgb(186, 186, 209); */
+    background: url("../src/assets/bg.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180vh;
 }
