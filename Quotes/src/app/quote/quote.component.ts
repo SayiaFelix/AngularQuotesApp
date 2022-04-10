@@ -13,9 +13,9 @@ export class QuoteComponent implements OnInit {
 
 
  quotes: Quotes[] = [
-    new Quotes(1,5,0,'No man is an Island','S.F Lucas','Ann Awsome',new Date(2022,1,14)),
-    new Quotes(2,1,0,'Enjoy life when you still young','E. Rensia','Sayia Lucas',new Date(2022,2,14)),
-    new Quotes(3,0,0,'Learn untill you earn','O.L Collins','Emmarensia Owino',new Date(2022,3,14)),
+    new Quotes(1,5,0,'No man is an Island','S.F Lucas','Ann Awsome',new Date(2020,1,14)),
+    new Quotes(2,1,0,'Enjoy life when you still young','E. Rensia','Sayia Lucas',new Date(2021,2,14)),
+    new Quotes(3,0,0,'Learn untill you earn','O.L Collins','Emmarensia Owino',new Date(2021,3,14)),
   ];
 
   toggleDetails(index:any){
@@ -30,6 +30,8 @@ export class QuoteComponent implements OnInit {
        }
   }   
   addNewQuotes(quote: any){
+      let quoteLength = this.quotes.length;
+      quote.id = quoteLength+1;
       quote.date = new Date(quote.date)
       this.quotes.push(quote)   
   }
