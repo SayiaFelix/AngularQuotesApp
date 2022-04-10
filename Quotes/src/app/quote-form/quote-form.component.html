@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
     <h2 class="text-center">Add Quote</h2>
     <hr>
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
@@ -8,38 +8,81 @@
             <div class="alert alert-danger" [hidden]="quote.valid || quote.pristine">
                 <!-- <div *ngIf=>
 
-                </div> -->
-                Add Quote!!!
-            </div>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="author" class="fs-4 fw-bolder">Author;</label>
-            <input type="text" class="form-control" required id="author" [(ngModel)]="newQuotes.author" author="author" #author='ngModel'>
-            <div class="alert alert-danger" [hidden]="author.valid || author.pristine">
+                </div> 
+Add Quote!!!
+</div>
+</div>
+<br>
+<div class="form-group">
+    <label for="author" class="fs-4 fw-bolder">Author;</label>
+    <input type="text" class="form-control" required id="author" [(ngModel)]="newQuotes.author" author="author" #author='ngModel'>
+    <div class="alert alert-danger" [hidden]="author.valid || author.pristine">
 
-                Add Author!!!
-            </div>
-            <!-- Display;<br>Quote; {{newQuotes.name}}<strong> Author;{{newQuotes.author}}</strong> -->
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="detail" class="fs-4 fw-bolder">Name;</label>
-            <input type="text" class="form-control" id="detail" [(ngModel)]="newQuotes.detail" detail="detail" #detail='ngModel' required>
-            <!-- <div class="alert alert-danger " [hidden]="detail.touched && detail.valid || detail.pristine ">
+        Add Author!!!
+    </div>
+   
+</div>
+<br>
+<div class="form-group">
+    <label for="detail" class="fs-4 fw-bolder">Name;</label>
+    <input type="text" class="form-control" id="detail" [(ngModel)]="newQuotes.detail" detail="detail" #detail='ngModel' required>
+     <div class="alert alert-danger " [hidden]="detail.touched && detail.valid || detail.pristine ">
                 Add Your Name!!!
-            </div> -->
-        </div>
-        <br>
-        <div class="form-group pb-6 ">
-            <label for="date" class="fs-6 fw-bolder">Current Date</label>
-            <br>
-            <input type='date' id="date " [(ngModel)]="newQuotes.date" name="completeDate" #date="ngModel" required>
-            <!-- <div [hidden]="date.valid || date.pristine " class="alert alert-danger">
+            </div> 
+</div>
+<br>
+<div class="form-group pb-6 ">
+    <label for="date" class="fs-6 fw-bolder">Current Date</label>
+    <br>
+    <input type='date' id="date " [(ngModel)]="newQuotes.date" name="completeDate" #date="ngModel" required>
+     <div [hidden]="date.valid || date.pristine " class="alert alert-danger">
                 <p>Date is required</p>
-            </div> -->
+            </div> 
+</div>
+<br>
+<button type="submit" class="btn btn-secondary btn-lg">Add Quotes</button>
+</form>
+</div> -->
+<div class="container-fluid">
+    <h2 class="text-center">Create a new Quote</h2>
+    <hr>
+    <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <div class="form-group">
+            <div class="form-group">
+                <label for="name" class="fs-6 fw-bolder">Quote;</label>
+                <input type="text" class="form-control" placeholder="Enter Quote..." id="name" [(ngModel)]="newQuotes.name" name=" name " #name='ngModel' required>
+                <div [hidden]="name.valid || name.pristine " class="alert alert-danger ">
+                    <p>Quote is required</p>
+
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="description" class="fs-6 fw-bolder">Author;</label>
+                <input class="form-control" placeholder="Enter Author's Name..." id="detail" [(ngModel)]="newQuotes.author " name="detail" #detail="ngModel" required>
+                <div [hidden]="detail.valid || detail.pristine " class="alert alert-danger ">
+                    <p>Author's Name is required</p>
+                </div>
+            </div>
+            <br>
+            <div class="form-group ">
+                <label for="description" class="fs-6 fw-bolder">Name</label>
+                <input class="form-control" placeholder="Enter Your Name..." id="detail" [(ngModel)]="newQuotes.detail" name="detail" #detail="ngModel" required>
+                <div [hidden]="detail.valid || detail.pristine " class="alert alert-danger ">
+                    <p>Author's Name is required</p>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="date" class="fs-6 fw-bolder">Current Date</label>
+                <br>
+                <input type='date' id="date " [(ngModel)]="newQuotes.date" name="completeDate" #date="ngModel" required>
+                <div [hidden]="date.valid || date.pristine " class="alert alert-danger">
+                    <p>Add Date!!!!</p>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-success btn-lg" [disabled]="!quoteForm.valid">Add Quote</button>
         </div>
-        <br>
-        <button type="submit" class="btn btn-secondary btn-lg">Add Quotes</button>
     </form>
 </div>
