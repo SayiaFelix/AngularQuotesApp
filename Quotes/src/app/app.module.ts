@@ -10,6 +10,7 @@ import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { HighlightDirective } from './highlight.directive';
 import { DateCountPipe } from './date-count.pipe';
+import { UpVoteDownVoteComponent } from './up-vote-down-vote/up-vote-down-vote.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { DateCountPipe } from './date-count.pipe';
     NavbarComponent,
     QuoteFormComponent,
     HighlightDirective,
-    DateCountPipe
+    DateCountPipe,
+    UpVoteDownVoteComponent
   ],
   imports: [
     BrowserModule,

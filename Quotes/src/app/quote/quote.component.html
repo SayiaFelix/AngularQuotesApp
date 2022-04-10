@@ -6,24 +6,30 @@
             <app-quote-form (addQuote)="addNewQuotes($event)"></app-quote-form>
         </div>
 
-        <div class="col-7">
+        <div class="col-6">
             <h2 class="text-center">Quotes List</h2>
             <hr>
             <ul>
                 <li *ngFor='let quote of quotes let i=index'>
+                    {{quote.id}}.)
+
                     <div *ngIf="quote.upVote == highest && quote.upVote > 0; then highlight else unhighlight">
                     </div>
                     <ng-template #highlight>
-                        <p appHighlight> <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> Quote; <strong id="name">{{quote.name}}</strong></p>
+                        <p appHighlight> <strong id="name">{{quote.name}}</strong></p>
                     </ng-template>
 
                     <ng-template #unhighlight>
-                        <p> <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> Quote; <strong id="name">{{quote.name}}</strong></p>
+                        <p> <strong id="name">{{quote.name}}</strong></p>
                     </ng-template>
-                    <!-- <button (click)='toggleDetails(i)'>Toggle Details</button> -->
-                    <span id="detail"> Written by; <strong>{{quote.author}}</strong> and submitted by; {{quote.detail}}</span> <br> Posted; <span id="date">{{quote.date|dateCount}}</span>
+
+                    <!-- <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> -->
+                    <br> Author; <span id="detail">{{quote.author}} </span>and submitted by; <span id="detail">{{quote.detail}}</span> <br> Posted; <span id="date">{{quote.date|dateCount}}</span>
+                    <app-up-vote-down-vote>
+
+                    </app-up-vote-down-vote>
                 </li>
-                <p *ngIf='quotes.length > 5'>Today is a good day, quotes in the air 🧠 </p>
+
             </ul>
 
             <div class="">

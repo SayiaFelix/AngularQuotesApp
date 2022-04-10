@@ -18,9 +18,9 @@ export class QuoteComponent implements OnInit {
     new Quotes(3,0,0,'Learn untill you earn','O.L Collins','Emmarensia Owino',new Date(2022,1,14)),
   ];
 
-  toggleDetails(index:any){
-    this.quotes[index].showDetail = !this.quotes[index].showDetail;
-  }
+  // toggleDetails(index:any){
+  //   this.quotes[index].showDetail = !this.quotes[index].showDetail;
+  // }
   quote:Quotes | undefined 
 
       deleteQuote(isComplete: any, index: number){
@@ -38,7 +38,7 @@ export class QuoteComponent implements OnInit {
   }
 
   array: number[]=this.quotes.map(quote=> quote.upVote)
-  highest=Math.max(...this.array)
+  public highest=Math.max(...this.array)
 
   constructor() { }
   ngOnInit(): void {

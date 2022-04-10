@@ -1,11 +1,6 @@
 .container-fluid {
-    height: 77vh;
+    /* height: 77vh; */
     border-left: 2px solid black;
     border-right: 1px solid black;
     border-radius: 5px;
 }
-
-
-/* .pb-6 {
-    margin-top: -30%;
-} */

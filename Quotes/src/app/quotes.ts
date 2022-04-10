@@ -9,6 +9,7 @@ export class Quotes {
     detail:string;
     date:Date;
     showDetail: boolean;
+  static upVote: any;
 
     constructor( id:number,upVote: number,downVote: number,name: string,author:string,detail:string,date:Date,){
       this.id=id

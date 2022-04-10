@@ -66,7 +66,7 @@ Add Quote!!!
             </div>
             <br>
             <div class="form-group ">
-                <label for="description" class="fs-6 fw-bolder">Name</label>
+                <label for="description" class="fs-6 fw-bolder">Name;</label>
                 <input class="form-control" placeholder="Enter Your Name..." id="detail" [(ngModel)]="newQuotes.detail" name="detail" #detail="ngModel" required>
                 <div [hidden]="detail.valid || detail.pristine " class="alert alert-danger ">
                     <p>Author's Name is required</p>
@@ -74,7 +74,7 @@ Add Quote!!!
             </div>
             <br>
             <div class="form-group">
-                <label for="date" class="fs-6 fw-bolder">Current Date</label>
+                <label for="date" class="fs-6 fw-bolder">Current Date;</label>
                 <br>
                 <input type='date' id="date " [(ngModel)]="newQuotes.date" name="completeDate" #date="ngModel" required>
                 <div [hidden]="date.valid || date.pristine " class="alert alert-danger">
