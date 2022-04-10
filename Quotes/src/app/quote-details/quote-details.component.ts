@@ -9,7 +9,7 @@ import { Quotes } from '../quotes';
 export class QuoteDetailsComponent implements OnInit {
 
   constructor() { }
-  @Input() quote: Quotes | undefined ;
+  @Input() quote: Quotes | undefined  ;
   @Output() isComplete = new EventEmitter<boolean>();
 
   quoteDelete(complete:boolean){

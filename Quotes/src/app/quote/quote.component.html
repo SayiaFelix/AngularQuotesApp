@@ -20,6 +20,7 @@
                     <ng-template #unhighlight>
                         <p> <span id="votes">upvote; {{quote.upVote}} downvote; {{quote.downVote}} </span> Quote; <strong id="name">{{quote.name}}</strong></p>
                     </ng-template>
+                    <!-- <button (click)='toggleDetails(i)'>Toggle Details</button> -->
                     <span id="detail"> Written by; <strong>{{quote.author}}</strong> and submitted by; {{quote.detail}}</span> on {{quote.date|date}}
                 </li>
             </ul>
